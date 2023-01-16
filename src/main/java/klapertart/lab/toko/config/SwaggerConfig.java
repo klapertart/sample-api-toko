@@ -1,4 +1,4 @@
-package klapertart.lab.toko.swagger;
+package klapertart.lab.toko.config;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
@@ -23,14 +23,6 @@ import java.util.Collections;
 
 @Configuration
 @EnableSwagger2
-@SecurityScheme(
-        name = "basicAuth", // can be set to anything
-        type = SecuritySchemeType.HTTP,
-        scheme = "basic"
-)
-@OpenAPIDefinition(
-        security = @SecurityRequirement(name = "basicAuth") // references the name defined in the line 3
-)
 public class SwaggerConfig {
 
     @Bean
